@@ -1,8 +1,6 @@
 <?php
 
 use App\Graph;
-use App\Printer;
-use App\Logger;
 
 $loader = require( __DIR__ . '/vendor/autoload.php' );
 
