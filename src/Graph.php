@@ -59,8 +59,7 @@ class Graph {
      *
      * @var \SplStack
      */
-    private $trajectory
-;
+    private $trajectory;
     /**
      *
      * @var array 

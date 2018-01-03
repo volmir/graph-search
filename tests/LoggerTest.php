@@ -4,14 +4,27 @@ use PHPUnit\Framework\TestCase;
 
 final class LoggerTest extends TestCase
 {
-    public function testInstance()
+    
+    protected function setUp()
     {
-        $logger = new App\Logger();
-        
+        $this->logger = new App\Logger();
+    }    
+    
+    public function testTnitInstance()
+    {
         $this->assertInstanceOf(
             App\Logger::class,
-            $logger
+            $this->logger
         );
     }
 
+    public function testSetGetMessages()
+    {
+        $this->logger->add('Message 1');
+        $this->logger->add('Message 2');
+        $messages = $this->logger->getMessages();
+        
+        $this->assertInternalType('array', $messages);
+        $this->assertEquals(2, count($messages));
+    }    
 }

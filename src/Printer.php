@@ -10,6 +10,11 @@ class Printer {
      */
     public $messages = [];
 
+    /**
+     * 
+     * @param array $messages
+     * @return $this
+     */
     public function set(array $messages) {
         if (is_array($messages)) {
             $this->messages = $messages;
