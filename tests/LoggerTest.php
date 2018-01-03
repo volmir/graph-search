@@ -26,5 +26,8 @@ final class LoggerTest extends TestCase
         
         $this->assertInternalType('array', $messages);
         $this->assertEquals(2, count($messages));
+        
+        $this->logger->clearMessages();
+        $this->assertEquals(0, count($this->logger->getMessages()));        
     }    
 }

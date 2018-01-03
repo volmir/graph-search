@@ -32,4 +32,7 @@ class Logger {
         return $this->messages;
     }
     
+    public function clearMessages() {
+        $this->messages = []; 
+    }    
 }
